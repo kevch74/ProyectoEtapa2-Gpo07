@@ -18,4 +18,4 @@ La solución consiste en seguir el proceso de modelado de DataWarehouse, desde l
 Instrucciones para el despliegue del proyecto:
 - Crear una base de datos en SQl Server y realizar el backup con el archivo NopDB.bak
 - Seguir los pasos indicados en el documento "Instrucciones de uso.docx" y descomprimir el archivo que contiene el proyecto en TOS llamado "Etapa2 TalendJobs.zip" en la carpeta señalada en el documento.
-
+- Abrir el proyecto en Power BI para visualizar los reportes generados, se adjuntan los archivos fuente de datos en formato .xlsx en la carpeta "datos para Power BI".
