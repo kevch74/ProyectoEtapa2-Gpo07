@@ -1,0 +1,36 @@
+COPY dimaddress
+FROM 's3://surio-bucket-001/03 presentation/DimAddress.csv'
+credentials
+'aws_access_key_id=AKIA2ME4RBDKS52PFQ6J;aws_secret_access_key=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'
+ignoreheader 1
+CSV;
+
+
+COPY dimproduct
+FROM 's3://surio-bucket-001/03 presentation/DimProduct.csv'
+credentials
+'aws_access_key_id=AKIA2ME4RBDKS52PFQ6J;aws_secret_access_key=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'
+ignoreheader 1
+CSV;
+
+
+COPY dimdate
+FROM 's3://surio-bucket-001/03 presentation/DimDate.csv'
+credentials
+'aws_access_key_id=AKIA2ME4RBDKS52PFQ6J;aws_secret_access_key=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'
+ignoreheader 1
+CSV;
+
+COPY dimcustomer
+FROM 's3://surio-bucket-001/03 presentation/DimCustomer.csv'
+credentials
+'aws_access_key_id=AKIA2ME4RBDKS52PFQ6J;aws_secret_access_key=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'
+ignoreheader 1
+CSV;
+
+COPY factorder
+FROM 's3://surio-bucket-001/03 presentation/FactOrder.csv'
+credentials
+'aws_access_key_id=AKIA2ME4RBDKS52PFQ6J;aws_secret_access_key=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'
+ignoreheader 1
+CSV;

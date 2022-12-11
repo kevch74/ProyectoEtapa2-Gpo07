@@ -1,0 +1,60 @@
+create table dimcustomer(
+    CustomerId integer,
+    Email varchar(255),
+    Name varchar(255),
+
+primary key(CustomerID)
+);
+
+create table dimdate(
+    DateId integer,
+    Day integer,
+    Month integer,
+    Year integer,
+    DayName varchar(255),
+    MonthName varchar(255),
+    Semester integer,
+    Trimester integer,
+
+primary key(DateId)
+);
+
+
+create table dimproduct(
+    ProductId integer,
+    Name varchar(255),
+    Manufacturer varchar(255),
+    Price decimal (82),
+    Category varchar(255),
+
+primary key(ProductId)
+);
+
+create table dimaddress(
+    AddressId integer,
+    Country varchar(255),
+    City varchar(255),
+    StateProvince varchar(255),
+    County varchar(255),
+    ZipPostalCode varchar(255),
+
+primary key(AddressId)
+);
+
+
+create table factorder(
+    OrderKey integer,
+    AddressKey integer,
+    ProductKey integer,
+    CustomerKey integer,
+    Quantity integer,
+    Price decimal (8,2),
+    DateKey integer,
+
+primary key(OrderKey),
+foreign key(AddressKey) references dimaddress(AddressId),
+foreign key(ProductKey) references dimproduct(ProductId),
+foreign key(CustomerKey) references dimcustomer(customerid),
+foreign key(DateKey) references dimdate(dateid)
+
+);
